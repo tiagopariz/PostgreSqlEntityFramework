@@ -1,4 +1,12 @@
-﻿#Projeto de Domínio
+﻿# C# | Entity Framework com Migrations usando banco de dados PostgreSQL
+
+Este projeto é um exemplo de como usar o banco de dados Postgres com Entity Framework e versioná-lo com Migrations usando o .NET Framework 4.6.2
+
+## Solução
+
+1. Crie uma solução vazia chamada PostgreSqlEntityFramework
+
+## Projeto de Domínio
 
 1. Crie um projeto do tipo class library em PostgreSqlEntityFramework/Domain chamado PostgreSqlEntityFramework.Domain
 2. Exclua Class1.cs
@@ -17,7 +25,7 @@ namespace PostgreSqlEntityFramework.Domain.Entities
 }
 ```
 
-#Projeto de Dados
+## Projeto de Dados
 
 1. Crie um projeto do tipo class library em PostgreSqlEntityFramework/Infra/Data chamado PostgreSqlEntityFramework.Infra.Data
 2. Exclua Class1.cs
@@ -59,6 +67,7 @@ namespace PostgreSqlEntityFramework.Infra.Data.Context
 ```
 6. Set as startup project
 7. App.Config
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
 
@@ -92,7 +101,7 @@ namespace PostgreSqlEntityFramework.Infra.Data.Context
   </entityFramework>
   
 </configuration>​​
-
+```
 8. Enable-Migrations -ProjectName "PostgreSqlEntityFramework.Infra.Data" -ConnectionStringName PostgresDbConnection -ContextTypeName PostgreSqlEntityFramework.Infra.Data.Context.Context -MigrationsDirectory PostgresMigrations
 9. Add-Migration V0001__InitialSetup
 10. Update-database
