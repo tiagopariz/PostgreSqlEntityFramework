@@ -31,14 +31,14 @@ namespace PostgreSqlEntityFramework.Domain.Entities
 
 ## Projeto de Dados
 
-1. Adicione um projeto do tipo class library em *PostgreSqlEntityFramework/Infra/Data* chamado *PostgreSqlEntityFramework.Infra.Data*,
+1. Adicione um projeto do tipo class library em *PostgreSqlEntityFramework/Infra/Data* chamado *PostgreSqlEntityFramework.Infra.Data*
 2. Exclua o arquivo Class1.cs
 3. Remova todas as referências, exceto System
 4. Execute via Package Manager Console:
 ```powershell
 Install-Package Npgsql.EntityFramework
 ```
-5. Adicione referência para o projeto *PostgreSqlEntityFramework.Domain*,
+5. Adicione referência para o projeto *PostgreSqlEntityFramework.Domain*
 6. Crie a classe de contexto em *PostgreSqlEntityFramework.Infra.Data/Context*
 ```CSharp
 using PostgreSqlEntityFramework.Domain.Entities;
@@ -73,7 +73,7 @@ namespace PostgreSqlEntityFramework.Infra.Data.Context
 }
 ```
 6. Configure como *Set as startup project*
-7. App.Config
+7. Altere o arquivo App.Config em PostgreSqlEntityFramework.Infra.Data conforme segue:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
@@ -109,11 +109,13 @@ namespace PostgreSqlEntityFramework.Infra.Data.Context
   
 </configuration>​​
 ```
-8. Execute via Package Manager Console:
+8. Execute via Package Manager Console os três comandos em sequência:
 ```powershell
 Enable-Migrations -ProjectName "PostgreSqlEntityFramework.Infra.Data" -ConnectionStringName PostgresDbConnection -ContextTypeName PostgreSqlEntityFramework.Infra.Data.Context.Context -MigrationsDirectory PostgresMigrations
-
+```
+```powershell
 Add-Migration V0001__InitialSetup
-
+```
+```powershell
 Update-database
 ```
