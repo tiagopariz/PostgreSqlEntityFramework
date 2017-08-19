@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{97D323B6-6EB2-46B1-B4D1-EF3C7A6079CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF5D7990-F8F0-4027-BD0C-9CAC69D3CC47}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{CCF995F9-03A6-46D5-BFFF-21E9816EE6DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{71D31A6B-49EA-40BD-AB79-38BA8D4ACB6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSqlEntityFramework.Infra.Data", "PostgreSqlEntityFramework.Infra.Data\PostgreSqlEntityFramework.Infra.Data.csproj", "{78AA918E-F2EA-483B-AA42-F5CAFBD7A326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostgreSqlEntityFramework.Domain", "PostgreSqlEntityFramework.Domain\PostgreSqlEntityFramework.Domain.csproj", "{E4D45092-0377-449C-AEB8-B8BD7BB943E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78AA918E-F2EA-483B-AA42-F5CAFBD7A326}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AA918E-F2EA-483B-AA42-F5CAFBD7A326}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AA918E-F2EA-483B-AA42-F5CAFBD7A326}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AA918E-F2EA-483B-AA42-F5CAFBD7A326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D45092-0377-449C-AEB8-B8BD7BB943E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D45092-0377-449C-AEB8-B8BD7BB943E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D45092-0377-449C-AEB8-B8BD7BB943E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D45092-0377-449C-AEB8-B8BD7BB943E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71D31A6B-49EA-40BD-AB79-38BA8D4ACB6E} = {CCF995F9-03A6-46D5-BFFF-21E9816EE6DF}
+		{78AA918E-F2EA-483B-AA42-F5CAFBD7A326} = {71D31A6B-49EA-40BD-AB79-38BA8D4ACB6E}
+		{E4D45092-0377-449C-AEB8-B8BD7BB943E9} = {97D323B6-6EB2-46B1-B4D1-EF3C7A6079CC}
+	EndGlobalSection
+EndGlobal
